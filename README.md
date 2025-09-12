@@ -11,28 +11,34 @@ This project follows a modular architecture designed for scalability, maintainab
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── Button.tsx      # Custom button component
-│   ├── Card.tsx        # Card container component
-│   └── index.ts        # Component exports
-├── screens/            # Screen components
-│   ├── Splash.tsx      # Splash screen with loading
-│   ├── Home.tsx        # Home dashboard
-│   ├── Profile.tsx     # User profile screen
-│   ├── Settings.tsx    # App settings screen
-├── navigation/         # Navigation setup
+│   ├── Button.tsx       # Custom button component
+│   ├── Button.styles.ts # Button styles
+│   ├── Card.tsx         # Card container component
+│   ├── Card.styles.ts   # Card styles
+│   └── index.ts         # Component exports
+├── screens/             # Screen components
+│   ├── Splash.tsx       # Splash screen with loading
+│   ├── Splash.styles.ts # Splash screen styles
+│   ├── Home.tsx         # Home dashboard
+│   ├── Home.styles.ts   # Home screen styles
+│   ├── Profile.tsx      # User profile screen
+│   ├── Profile.styles.ts# Profile screen styles
+│   ├── Settings.tsx     # App settings screen
+│   └── Settings.styles.ts# Settings screen styles
+├── navigation/          # Navigation setup
 │   ├── AppNavigator.tsx        # Main stack navigator
 │   └── MainTabNavigator.tsx    # Bottom tab navigator
-├── hooks/              # Custom React hooks
+├── hooks/               # Custom React hooks
 │   ├── useAsyncStorage.ts     # AsyncStorage hook
 │   ├── useAppState.ts         # App state hook
 │   └── index.ts               # Hook exports
-├── utils/              # Utility functions and constants
-│   ├── constants.ts    # App constants (colors, spacing, etc.)
-│   ├── helpers.ts      # Helper functions
-│   └── index.ts        # Utility exports
-├── types/              # TypeScript type definitions
-│   └── index.ts        # Navigation and component types
-└── assets/             # Static assets (images, icons)
+├── utils/               # Utility functions and constants
+│   ├── constants.ts     # App constants (colors, spacing, etc.)
+│   ├── helpers.ts       # Helper functions
+│   └── index.ts         # Utility exports
+├── types/               # TypeScript type definitions
+│   └── index.ts         # Navigation and component types
+└── assets/              # Static assets (images, icons)
 ```
 
 ### Key Features
@@ -41,6 +47,7 @@ src/
 - **Splash Screen**: Branded loading screen with automatic transition
 - **Reusable Components**: Modular UI components for consistent design
 - **Custom Hooks**: Shared logic for AsyncStorage and app state management
+- **Separated Styles**: Each component/screen has its own styles file for better organization
 - **TypeScript**: Full type safety across the application
 - **Modular Architecture**: Easy to extend and maintain
 

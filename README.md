@@ -1,97 +1,138 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Majilis Mobile Frontend
 
-# Getting Started
+A clean, modular React Native mobile application with bottom navigation, splash screen, and reusable components.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Architecture Overview
 
-## Step 1: Start Metro
+This project follows a modular architecture designed for scalability, maintainability, and reusability. The codebase is organized into distinct packages that promote separation of concerns and easy testing.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Project Structure
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx      # Custom button component
+│   ├── Card.tsx        # Card container component
+│   └── index.ts        # Component exports
+├── screens/            # Screen components
+│   ├── Splash.tsx      # Splash screen with loading
+│   ├── Home.tsx        # Home dashboard
+│   ├── Profile.tsx     # User profile screen
+│   ├── Settings.tsx    # App settings screen
+├── navigation/         # Navigation setup
+│   ├── AppNavigator.tsx        # Main stack navigator
+│   └── MainTabNavigator.tsx    # Bottom tab navigator
+├── hooks/              # Custom React hooks
+│   ├── useAsyncStorage.ts     # AsyncStorage hook
+│   ├── useAppState.ts         # App state hook
+│   └── index.ts               # Hook exports
+├── utils/              # Utility functions and constants
+│   ├── constants.ts    # App constants (colors, spacing, etc.)
+│   ├── helpers.ts      # Helper functions
+│   └── index.ts        # Utility exports
+├── types/              # TypeScript type definitions
+│   └── index.ts        # Navigation and component types
+└── assets/             # Static assets (images, icons)
 ```
 
-## Step 2: Build and run your app
+### Key Features
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- **Bottom Tab Navigation**: Smooth navigation between Home, Profile, and Settings screens
+- **Splash Screen**: Branded loading screen with automatic transition
+- **Reusable Components**: Modular UI components for consistent design
+- **Custom Hooks**: Shared logic for AsyncStorage and app state management
+- **TypeScript**: Full type safety across the application
+- **Modular Architecture**: Easy to extend and maintain
 
-### Android
+### Navigation Flow
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+Splash Screen (2s) → Bottom Tab Navigator
+                          ├── Home
+                          ├── Profile
+                          └── Settings
 ```
 
-### iOS
+### Technologies Used
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- **React Native 0.81.4**: Core framework
+- **React Navigation**: Navigation library
+- **TypeScript**: Type safety
+- **React Native Safe Area Context**: Safe area handling
+- **AsyncStorage**: Local data persistence
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Getting Started
 
-```sh
-bundle install
-```
+### Prerequisites
 
-Then, and every time you update your native dependencies, run:
+- Node.js >= 20
+- React Native development environment set up
+- Android Studio (for Android) or Xcode (for iOS)
 
-```sh
-bundle exec pod install
-```
+### Installation
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+1. Clone the repository
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-```sh
-# Using npm
-npm run ios
+3. For iOS, install CocoaPods:
+   ```sh
+   cd ios && bundle exec pod install
+   ```
 
-# OR using Yarn
-yarn ios
-```
+### Running the App
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+1. Start Metro bundler:
+   ```sh
+   npm start
+   ```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+2. Run on Android:
+   ```sh
+   npm run android
+   ```
 
-## Step 3: Modify your app
+3. Run on iOS:
+   ```sh
+   npm run ios
+   ```
 
-Now that you have successfully run the app, let's make changes!
+## Development Guidelines
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Adding New Screens
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+1. Create screen component in `src/screens/`
+2. Add route to navigation types in `src/types/index.ts`
+3. Update navigator configuration
+4. Add to tab navigator if needed
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Creating Reusable Components
 
-## Congratulations! :tada:
+1. Create component in `src/components/`
+2. Export from `src/components/index.ts`
+3. Use TypeScript interfaces for props
+4. Follow existing component patterns
 
-You've successfully run and modified your React Native App. :partying_face:
+### Using Custom Hooks
 
-### Now what?
+Import hooks from `src/hooks/` and use them in components for shared logic.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+### Styling
 
-# Troubleshooting
+- Use constants from `src/utils/constants.ts` for consistent colors and spacing
+- Follow mobile-first design principles
+- Use StyleSheet for performance
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Contributing
 
-# Learn More
+1. Follow the established project structure
+2. Use TypeScript for all new code
+3. Write reusable, modular components
+4. Test navigation flows thoroughly
+5. Update documentation as needed
 
-To learn more about React Native, take a look at the following resources:
+## License
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License.

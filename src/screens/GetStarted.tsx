@@ -17,7 +17,7 @@ const GetStarted: React.FC = () => {
     const splashStyles = createSplashStyles(colors);
 
     const handleGetStarted = () => {
-        navigation.replace('MainTabs');
+        navigation.replace('SelectLanguage');
     };
 
     return (

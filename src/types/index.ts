@@ -1,6 +1,7 @@
 export type RootStackParamList = {
   Splash: undefined;
   GetStarted: undefined;
+  SelectLanguage: undefined;
   MainTabs: undefined;
 };
 

@@ -12,14 +12,14 @@ export const createButtonStyles = (colors: ThemeColors) => StyleSheet.create({
     justifyContent: 'center',
   },
   disabled: {
-    backgroundColor: '#ccc',
+    backgroundColor: colors.border,
   },
   text: {
-    color: colors.background,
+    color: '#ffffff',
     fontSize: 16,
     fontWeight: '600',
   },
   disabledText: {
-    color: '#999',
+    color: colors.textSecondary,
   },
 });

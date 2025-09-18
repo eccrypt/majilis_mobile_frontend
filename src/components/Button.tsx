@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, ViewStyle, TextStyle } from 'react-native';
-import { buttonStyles } from '../styles/Common/Button.styles';
+import { createButtonStyles } from '../styles/Common/Button.styles';
+import { useTheme } from '../hooks/useTheme';
 
 interface ButtonProps {
   title: string;
@@ -11,6 +12,9 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ title, onPress, style, textStyle, disabled = false }) => {
+  const { colors } = useTheme();
+  const buttonStyles = createButtonStyles(colors);
+
   return (
     <TouchableOpacity
       style={[buttonStyles.button, disabled && buttonStyles.disabled, style]}

@@ -13,7 +13,7 @@ const Splash: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('MainTabs');
+      navigation.replace('GetStarted');
     }, 10000);
 
     return () => clearTimeout(timer);

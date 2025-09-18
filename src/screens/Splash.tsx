@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
@@ -14,16 +14,14 @@ const Splash: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.replace('MainTabs');
-    }, 2000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, [navigation]);
 
   return (
     <View style={splashStyles.container}>
-      <Text style={splashStyles.title}>Majilis</Text>
-      <ActivityIndicator size="large" color={COLORS.primary} />
-      <Text style={splashStyles.subtitle}>Loading...</Text>
+      <Image style={splashStyles.logo} source={require('../assets/images/PrimaryLogo.png')} />
     </View>
   );
 };

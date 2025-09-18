@@ -19,4 +19,9 @@ export const splashStyles = StyleSheet.create({
     color: COLORS.dark,
     marginTop: 10,
   },
+  logo: {
+    width: 200,
+    height: 100,
+    marginBottom: 20,
+  },
 });

@@ -32,3 +32,19 @@ export const STORAGE_KEYS = {
   APP_SETTINGS: 'app_settings',
   AUTH_TOKEN: 'auth_token',
 };
+export const THEME_COLORS = {
+  light: {
+    background: '#ffffff',
+    surface: '#f8f9fa',
+    text: '#000000',
+    textSecondary: '#666666',
+    border: '#e0e0e0',
+  },
+  dark: {
+    background: '#000000',
+    surface: '#1a1a1a',
+    text: '#ffffff',
+    textSecondary: '#cccccc',
+    border: '#333333',
+  },
+};

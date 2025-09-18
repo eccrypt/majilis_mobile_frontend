@@ -14,3 +14,11 @@ export type ScreenProps<T extends keyof RootStackParamList> = {
   navigation: any;
   route: any;
 };
+
+export type ThemeColors = {
+  background: string;
+  surface: string;
+  text: string;
+  textSecondary: string;
+  border: string;
+};

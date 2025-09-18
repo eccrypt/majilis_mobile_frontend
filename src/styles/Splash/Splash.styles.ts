@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native';
 import { COLORS, FONT_SIZES } from '../../utils';
+import { ThemeColors } from '../../types';
 
-export const splashStyles = StyleSheet.create({
+export const createSplashStyles = (colors: ThemeColors) => StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.light,
+    backgroundColor: colors.background,
   },
   title: {
     fontSize: FONT_SIZES.xxxl,
@@ -16,7 +17,7 @@ export const splashStyles = StyleSheet.create({
   },
   subtitle: {
     fontSize: FONT_SIZES.md,
-    color: COLORS.dark,
+    color: colors.text,
     marginTop: 10,
   },
   logo: {

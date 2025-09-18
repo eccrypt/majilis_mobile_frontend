@@ -3,13 +3,16 @@ import { View, Text, ActivityIndicator, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
-import { splashStyles } from '../styles/Splash/Splash.styles';
+import { createSplashStyles } from '../styles/Splash/Splash.styles';
 import { COLORS } from '../utils';
+import { useTheme } from '../hooks';
 
 type SplashNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Splash'>;
 
 const Splash: React.FC = () => {
   const navigation = useNavigation<SplashNavigationProp>();
+  const { colors } = useTheme();
+  const splashStyles = createSplashStyles(colors);
 
   useEffect(() => {
     const timer = setTimeout(() => {

@@ -1,20 +1,22 @@
 import { StyleSheet } from 'react-native';
 import { COLORS, FONT_SIZES } from '../../utils';
+import { ThemeColors } from '../../types';
 
-export const homeStyles = StyleSheet.create({
+export const createHomeStyles = (colors: ThemeColors) => StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.light,
+    backgroundColor: colors.background,
   },
   title: {
     fontSize: FONT_SIZES.xl,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: colors.text,
   },
   subtitle: {
     fontSize: FONT_SIZES.md,
-    color: COLORS.dark,
+    color: colors.text,
   },
 });

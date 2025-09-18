@@ -1,13 +1,14 @@
 import { COLORS } from '../../utils';
+import { ThemeColors } from '../../types';
 
-export const mainTabNavigatorStyles = {
+export const createMainTabNavigatorStyles = (colors: ThemeColors) => ({
   tabBarActiveTintColor: COLORS.primary,
-  tabBarInactiveTintColor: '#666',
+  tabBarInactiveTintColor: colors.textSecondary,
   headerStyle: {
-    backgroundColor: COLORS.white,
+    backgroundColor: colors.background,
   },
-  headerTintColor: '#fff',
+  headerTintColor: colors.text,
   headerTitleStyle: {
     fontWeight: 'bold' as const,
   },
-};
+});

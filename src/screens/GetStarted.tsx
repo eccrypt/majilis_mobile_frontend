@@ -3,14 +3,18 @@ import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-nati
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
-import { getStartedStyles } from '../styles/GetStarted/GetStarted.styles';
+import { createGetStartedStyles } from '../styles/GetStarted/GetStarted.styles';
 import { COLORS } from '../utils';
-import { splashStyles } from '../styles/Splash/Splash.styles';
+import { createSplashStyles } from '../styles/Splash/Splash.styles';
+import { useTheme } from '../hooks';
 
 type GetStartedNavigationProp = NativeStackNavigationProp<RootStackParamList, 'GetStarted'>;
 
 const GetStarted: React.FC = () => {
+    const { colors } = useTheme();
     const navigation = useNavigation<GetStartedNavigationProp>();
+    const getStartedStyles = createGetStartedStyles(colors);
+    const splashStyles = createSplashStyles(colors);
 
     const handleGetStarted = () => {
         navigation.replace('MainTabs');

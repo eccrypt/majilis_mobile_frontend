@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../utils';
+import { ThemeColors } from '../../types';
 
-export const buttonStyles = StyleSheet.create({
+export const createButtonStyles = (colors: ThemeColors) => StyleSheet.create({
   button: {
     backgroundColor: COLORS.primary,
     paddingVertical: 12,
@@ -14,7 +15,7 @@ export const buttonStyles = StyleSheet.create({
     backgroundColor: '#ccc',
   },
   text: {
-    color: COLORS.light,
+    color: colors.background,
     fontSize: 16,
     fontWeight: '600',
   },

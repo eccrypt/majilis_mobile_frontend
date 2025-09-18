@@ -1,14 +1,15 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import { COLORS, FONT_SIZES } from '../../utils';
+import { ThemeColors } from '../../types';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
-export const getStartedStyles = StyleSheet.create({
+export const createGetStartedStyles = (colors: ThemeColors) => StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: COLORS.light,
+    backgroundColor: colors.background,
     paddingHorizontal: 20,
     paddingVertical: 40,
   },
@@ -26,13 +27,13 @@ export const getStartedStyles = StyleSheet.create({
   },
   subtitle: {
     fontSize: FONT_SIZES.lg,
-    color: COLORS.dark,
+    color: colors.text,
     textAlign: 'center',
     marginBottom: 20,
   },
   description: {
     fontSize: FONT_SIZES.md,
-    color: COLORS.dark,
+    color: colors.text,
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -47,7 +48,7 @@ export const getStartedStyles = StyleSheet.create({
     marginBottom: 100,
   },
   buttonText: {
-    color: COLORS.light,
+    color: colors.background,
     fontSize: FONT_SIZES.lg,
     fontWeight: 'bold',
   },

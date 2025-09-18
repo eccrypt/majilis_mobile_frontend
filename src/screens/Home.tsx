@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { homeStyles } from '../styles/Home/Home.styles';
+import { createHomeStyles } from '../styles/Home/Home.styles';
+import { useTheme } from '../hooks';
 
 const Home: React.FC = () => {
+  const { colors } = useTheme();
+  const homeStyles = createHomeStyles(colors);
+
   return (
     <View style={homeStyles.container}>
       <Text style={homeStyles.title}>Home Screen</Text>

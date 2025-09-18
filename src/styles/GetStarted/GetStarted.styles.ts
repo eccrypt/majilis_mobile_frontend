@@ -41,7 +41,7 @@ export const getStartedStyles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 25,
-    width: '100%',
+    width: '80%',
     alignItems: 'center',
     zIndex: 10,
     marginBottom: 100,

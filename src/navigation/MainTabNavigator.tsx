@@ -4,23 +4,13 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Settings from '../screens/Settings';
 import { MainTabParamList } from '../types';
-
+import { mainTabNavigatorStyles } from '../styles/MainTabNavigator/MainTabNavigator.styles';
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
 const MainTabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
-      screenOptions={{
-        tabBarActiveTintColor: '#007AFF',
-        tabBarInactiveTintColor: '#666',
-        headerStyle: {
-          backgroundColor: '#007AFF',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}
+      screenOptions={mainTabNavigatorStyles}
     >
       <Tab.Screen
         name="Home"

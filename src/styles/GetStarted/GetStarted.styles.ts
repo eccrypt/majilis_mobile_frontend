@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { COLORS, FONT_SIZES } from '../../utils';
+
+const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
 
 export const getStartedStyles = StyleSheet.create({
   container: {
@@ -46,5 +48,13 @@ export const getStartedStyles = StyleSheet.create({
     color: COLORS.white,
     fontSize: FONT_SIZES.lg,
     fontWeight: 'bold',
+  },
+  backgroundImage: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    width: screenWidth,
+    height: screenHeight / 3,
   },
 });

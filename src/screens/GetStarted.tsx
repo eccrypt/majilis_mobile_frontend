@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
@@ -24,6 +24,11 @@ const GetStarted: React.FC = () => {
             <TouchableOpacity style={getStartedStyles.button} onPress={handleGetStarted}>
                 <Text style={getStartedStyles.buttonText}>Get Started</Text>
             </TouchableOpacity>
+            <ImageBackground
+                source={require('../assets/images/PrimaryBackground.png')}
+                style={getStartedStyles.backgroundImage}
+                resizeMode="contain"
+            />
         </View>
     );
 };

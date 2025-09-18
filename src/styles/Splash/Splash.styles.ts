@@ -20,8 +20,7 @@ export const splashStyles = StyleSheet.create({
     marginTop: 10,
   },
   logo: {
-    width: 200,
-    height: 100,
-    marginBottom: 20,
+    width: 280,
+    height: 150,
   },
 });

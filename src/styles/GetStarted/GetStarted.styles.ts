@@ -43,6 +43,8 @@ export const getStartedStyles = StyleSheet.create({
     borderRadius: 25,
     width: '100%',
     alignItems: 'center',
+    zIndex: 10,
+    marginBottom: 100,
   },
   buttonText: {
     color: COLORS.white,
@@ -56,5 +58,6 @@ export const getStartedStyles = StyleSheet.create({
     right: 0,
     width: screenWidth,
     height: screenHeight / 3,
+    zIndex: 1,
   },
 });

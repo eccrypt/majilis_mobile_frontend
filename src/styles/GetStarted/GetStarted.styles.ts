@@ -8,7 +8,7 @@ export const getStartedStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.light,
     paddingHorizontal: 20,
     paddingVertical: 40,
   },
@@ -47,7 +47,7 @@ export const getStartedStyles = StyleSheet.create({
     marginBottom: 100,
   },
   buttonText: {
-    color: COLORS.white,
+    color: COLORS.light,
     fontSize: FONT_SIZES.lg,
     fontWeight: 'bold',
   },

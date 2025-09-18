@@ -14,7 +14,7 @@ export const buttonStyles = StyleSheet.create({
     backgroundColor: '#ccc',
   },
   text: {
-    color: COLORS.white,
+    color: COLORS.light,
     fontSize: 16,
     fontWeight: '600',
   },

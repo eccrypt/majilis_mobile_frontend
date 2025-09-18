@@ -1,14 +1,11 @@
 export const COLORS = {
   primary: '#188F8B',
-  secondary: '#6c757d',
-  success: '#28a745',
-  danger: '#dc3545',
-  warning: '#ffc107',
+  secondarytext: '#6c757d',
+  danger: '#ED2E38',
+  optionaltext: '#D4AA3A',
   info: '#17a2b8',
-  light: '#f8f9fa',
-  dark: '#343a40',
-  white: '#ffffff',
-  black: '#000000',
+  light: '#ffffff',
+  dark: '#000000',
 };
 
 export const SPACING = {

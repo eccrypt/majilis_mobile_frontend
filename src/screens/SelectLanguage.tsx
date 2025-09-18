@@ -60,8 +60,8 @@ const SelectLanguage: React.FC = () => {
         animationType="slide"
         onRequestClose={() => setDropdownVisible(false)}
       >
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' }}>
-          <View style={{ backgroundColor: colors.surface, width: '80%', borderRadius: 10 }}>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
             {languages.map((language) => (
               <TouchableOpacity
                 key={language.code}

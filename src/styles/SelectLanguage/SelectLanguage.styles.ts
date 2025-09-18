@@ -30,6 +30,7 @@ export const createSelectLanguageStyles = (colors: ThemeColors) => StyleSheet.cr
     color: colors.text,
     textAlign: 'center',
     marginBottom: 20,
+    marginTop: 40,
   },
   description: {
     fontSize: FONT_SIZES.md,
@@ -45,6 +46,7 @@ export const createSelectLanguageStyles = (colors: ThemeColors) => StyleSheet.cr
     borderRadius: 8,
     backgroundColor: colors.surface,
     marginBottom: 20,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -96,5 +98,16 @@ export const createSelectLanguageStyles = (colors: ThemeColors) => StyleSheet.cr
     width: screenWidth,
     height: screenHeight / 3,
     zIndex: 1,
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  modalContent: {
+    backgroundColor: colors.surface,
+    width: '80%',
+    borderRadius: 10,
   },
 });
